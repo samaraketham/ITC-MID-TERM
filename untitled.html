@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Choose Your Own Adventure Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>Choose Your Own Adventure</h1>
+    </header>
+    <main>
+      <div class="story">
+        <p>Welcome to the adventure! Click the button to start...</p>
+      </div>
+      <div class="choices">
+        <button id="choice1"></button>
+        <button id="choice2"></button>
+      </div>
+      <div class="image" id="story-image-container">
+        <img id="story-image" src="" alt="Story Image">
+      </div>
+    </main>
+  </div>
+<footer>
+  <h1>Addendum</h1>
+  <p><strong>story</strong> object: Contains various story segments identified by keys like 'start', 'continue', 'sunlight', 'trail', etc. Each segment has:</p>
+<ul>
+  <li><code>text</code>: The narrative text for that part of the story.</li>
+  <li><code>choices</code>: An array of choices available at that stage.</li>
+  <li><code>consequences</code>: Corresponding consequences or the next parts of the story based on the choices made.</li>
+  <li><code>images</code>: An array containing image URLs for that part of the story.</li>
+</ul>
+
+<p>The <code>updatePage</code> function updates the content displayed on the web page according to the current part of the story. It sets the narrative text, choice buttons, and dynamically generates images based on the current story part.</p>
+
+<p>When a choice button is clicked, it progresses to the next part of the story and updates the page accordingly. The images related to the story part are displayed within the <code>story-image-container</code>, which is updated by creating <code>img</code> elements for each image URL found in the <code>currentStoryPart.images</code> array.</p>
+
+<p>The <code>startGame</code> function initializes the game by setting the initial story part to 'start', and <code>window.onload</code> is set to trigger the <code>startGame</code> function when the window loads.</p>
+
+<p>This structure allows for a dynamic storytelling experience with multiple choices and images associated with each part of the narrative. Players can progress through the story by making choices and seeing different images corresponding to their decisions.</p>
+
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
